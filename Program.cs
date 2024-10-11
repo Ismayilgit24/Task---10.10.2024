@@ -39,20 +39,3 @@
 
 //	}
 //}
-
-using System;
-
-class Program
-{
-	static void Main()
-	{
-		int number = 100;
-		DisplayNumber(in number);  // 'in' açar sözü ilə arqument ötürülür
-	}
-
-	static void DisplayNumber(in int value)
-	{
-		value = 200;  // Bu səhv verəcək, çünki 'in' arqument dəyişdirilə bilməz
-		Console.WriteLine($"Dəyər: {value}");  // Sadəcə oxumaq olar
-	}
-}
