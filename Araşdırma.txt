@@ -1,0 +1,26 @@
+C, C++ və ya C# kimi dillərdə ref, out və in açar sözləri əsasən funksiyalara arqument ötürülməsi zamanı istifadə olunur. 
+Hər birinin fərqli istifadəsi və məqsədi var. 
+in açar sözü dəyişəni funksiyaya referensiya ilə ötürməyə imkan verir, amma funksiyanın həmin dəyişəni dəyişdirməsinə icazə
+vermir. 
+Yəni dəyişən yalnız oxuna bilər, amma dəyişdirilə bilməz. 
+Bu performansı artırmaq üçün faydalıdır, xüsusən də böyük verilənləri ötürəndə.
+
+
+Kod Nümunəsi :
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int number = 100;
+        DisplayNumber(in number);  // 'in' açar sözü ilə arqument ötürülür
+    }
+
+    static void DisplayNumber(in int value)
+    {
+        // value = 200;  // Bu səhv verəcək, çünki 'in' arqument dəyişdirilə bilməz
+        Console.WriteLine($"Dəyər: {value}");  // Sadəcə oxumaq olar
+    }
+}
+
