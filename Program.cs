@@ -7,13 +7,13 @@
 //		static void Main(string[] args)
 //		{
 //			int[] array = { 1, 2, 3, 4, 5 };
-//			ArrayExample(ref array, 10, 11, 12, 13, 15);
+//			CustomResize(ref array, 10, 11, 12, 13, 15);
 
 
 //		}
 
 
-//		public static void ArrayExample(ref int[] array, params int[] nums)
+//		public static void CustomResize(ref int[] array, params int[] nums)
 //		{
 //			int[] newArr = new int[array.Length + nums.Length];
 
